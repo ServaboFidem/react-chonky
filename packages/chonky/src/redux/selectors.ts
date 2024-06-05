@@ -2,13 +2,15 @@ import { sort } from 'fast-sort';
 import FuzzySearch from 'fuzzy-search';
 import { Nilable, Nullable } from 'tsdef';
 
-import { createSelector } from '@reduxjs/toolkit';
+//import { createSelector } from '@reduxjs/toolkit';
 
 import { OptionIds } from '../action-definitions/option-ids';
 import { FileArray, FileData, FileFilter } from '../types/file.types';
 import { RootState } from '../types/redux.types';
 import { FileSortKeySelector, SortOrder } from '../types/sort.types';
 import { FileHelper } from '../util/file-helper';
+import { createSelector } from 'reselect'
+
 
 // Raw selectors
 export const selectInstanceId = (state: RootState) => state.instanceId;
